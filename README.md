@@ -44,6 +44,13 @@ The agent relies on the following key components:
 - `ChatHistoryAgentThread`: Maintains conversation history
 - `ChatCompletionAgent`: Handles chat completion functionality
 
+
+## Kaggle Dataset
+
+Ensure that you download the following CSV dataset, and add to your project as `loans.csv` in the root folder of your project
+
+[View Data](https://www.kaggle.com/datasets/deboleenamukherjee/financial-risk-data-large?select=financial_risk_analysis_large.csv)
+
 ### Constructor
 
 ```csharp
