@@ -1,0 +1,21 @@
+---
+name: ExamplePrompt
+description: A prompt that uses context to ground an incoming question
+authors:
+  - Montray Davis
+model:
+  api: chat
+  configuration:
+    type: openai
+    api_key: ${env:OPENAI}
+    name: gpt-4o-mini
+  parameters:
+    max_tokens: 3000
+sample: {}
+---
+
+system:
+You are an expert mortgage financial analyst tasked with reviewing borrower finances.
+
+user:
+{{instructions}}

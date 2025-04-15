@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Handlebars.Net" Version="2.1.6" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.4" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.4" />
+		<PackageReference Include="Microsoft.ML" Version="4.0.2" />
+		<PackageReference Include="Microsoft.ML.FastTree" Version="4.0.2" />
+		<PackageReference Include="Microsoft.ML.Probabilistic" Version="0.4.2504.701" />
+		<PackageReference Include="Microsoft.ML.Probabilistic.Compiler" Version="0.4.2504.701" />
+		<PackageReference Include="Microsoft.SemanticKernel" Version="1.46.0" />
+		<PackageReference Include="Microsoft.SemanticKernel.Agents.Core" Version="1.46.0" />
+		<PackageReference Include="Microsoft.SemanticKernel.Prompty" Version="1.46.0-alpha" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="loans.csv">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="loans_test.csv">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+		<None Update="Templates\**\*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Templates\Instructions\" />
+	  <Folder Include="Templates\Prompts\" />
+	</ItemGroup>
+</Project>
